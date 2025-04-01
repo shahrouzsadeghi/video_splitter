@@ -1,73 +1,113 @@
+# Video Splitter for Instagram Stories
 
-
-```markdown
-# Video Splitter
-
-A simple Python tool to split videos into segments using MoviePy.
+A user-friendly Python tool that splits long videos into Instagram-ready segments, preserving the optimal aspect ratio.
 
 ## Description
 
-This repository contains a Python script that splits an input video into multiple segments of a specified duration. It leverages the [MoviePy](https://zulko.github.io/moviepy/) library to process video files, ensuring that each segment retains the original video's aspect ratio.
+This tool helps you split long videos into shorter segments, specifically optimized for Instagram stories. It maintains the proper aspect ratio and automatically handles both portrait and landscape videos. Perfect for content creators who want to share longer videos as Instagram stories.
 
 ## Features
 
-- **Video Splitting:** Divide a video into segments based on a specified segment length.
-- **Aspect Ratio Preservation:** Automatically resizes segments to maintain the original video's aspect ratio.
-- **Easy to Use:** Minimal configuration required to get started.
+- **Instagram Story Optimization:** Creates segments ideally formatted for Instagram stories.
+- **Automatic Aspect Ratio Handling:** Properly resizes videos while preserving their quality.
+- **User-Friendly Interface:** Simple interactive prompts for non-technical users.
+- **Flexible Configuration:** Customize segment length and output folder.
+- **Progress Tracking:** Shows clear progress as your video is processed.
 
 ## Requirements
 
 - Python 3.x
-- [MoviePy](https://zulko.github.io/moviepy/) (install via `pip install moviepy`)
+- [MoviePy](https://zulko.github.io/moviepy/) library
 
 ## Installation
 
-1. **Clone the Repository:**
+### For Windows Users
 
-   ```bash
-   git clone <YOUR_GITHUB_REPO_URL>
-   ```
+1. **Install Python:**
+   - Download and install Python from [python.org](https://www.python.org).
+   - During installation, make sure to check "Add Python to PATH".
 
-2. **Change to the Repository Directory:**
+2. **Install the Required Library:**
+   - Open Command Prompt (search for "cmd" in the Start menu).
+   - Run the following command:
+     ```bash
+     pip install moviepy
+     ```
 
-   ```bash
-   cd video-splitter
-   ```
+3. **Download the Video Splitter:**
+   - Download `video_splitter.py` from this repository.
 
-3. **Install Dependencies:**
+### For Mac Users
 
-   ```bash
-   pip install moviepy
-   ```
+1. **Install Python:**
+   - Download and install Python from [python.org](https://www.python.org).
 
-## Usage
+2. **Install the Required Library:**
+   - Open Terminal (from Applications > Utilities).
+   - Run the following command:
+     ```bash
+     pip install moviepy
+     ```
 
-1. **Configure the Script:**
-   - Open `video_splitter.py`.
-   - Update the following variables as needed:
-     - `video_path`: Path to your input video file.
-     - `output_folder`: Directory where the segments will be saved.
-     - `segment_length`: Duration (in seconds) for each segment.
+3. **Download the Video Splitter:**
+   - Download `video_splitter.py` from this repository.
 
-2. **Run the Script:**
+## How to Use
 
-   ```bash
-   python video_splitter.py
-   ```
+### Method 1: Interactive Mode (Easiest for Beginners)
 
-3. **Check Output:**
-   - The segments will be saved in the specified output folder, named as `segment_1.MOV`, `segment_2.MOV`, etc.
+1. **Start the Program:**
+   - Double-click on `video_splitter.py`, or
+   - Open Command Prompt/Terminal, navigate to the folder containing the script, and run:
+     ```bash
+     python video_splitter.py
+     ```
 
-## Repository Structure
+2. **Follow the Prompts:**
+   - Enter the path to your video file when asked.
+   - Optionally specify an output folder (or press Enter for default).
+   - Optionally specify a segment length in seconds (or press Enter for the default 59 seconds).
 
-```plaintext
-.
-├── video_splitter.py   # Main script to split video
-├── README.md           # Project documentation
-├── .gitignore          # Specifies files to ignore in Git
-└── LICENSE             # Project license (MIT License)
+3. **Wait for Processing:**
+   - The program will show progress as it splits your video.
+   - When complete, it will inform you where your video segments are saved.
+
+### Method 2: Command Line (Advanced)
+
+For those comfortable with the command line, you can run:
+
+```bash
+python video_splitter.py path/to/your/video.mp4 -o output_folder -l 59
 ```
 
+Where:
+- `path/to/your/video.mp4` is the path to your video file.
+- `-o output_folder` (optional) specifies the output folder.
+- `-l 59` (optional) sets the segment length in seconds.
+
+## Tips for Instagram Stories
+
+- The default segment length of 59 seconds is ideal for Instagram stories.
+- Both portrait (9:16) and landscape videos are automatically handled.
+- Portrait videos work best for Instagram stories.
+- Segments are created in MP4 format, which works well with Instagram.
+
+## Troubleshooting
+
+### Error Loading Video
+- Ensure the video file path is correct.
+- Verify that the video file is not corrupted.
+- Try moving the video to a path without special characters.
+
+### Installation Issues
+- If `pip install moviepy` fails, try:
+  ```bash
+  python -m pip install moviepy
+  ```
+
+### Video Quality Issues
+- The original video quality is preserved, but note that Instagram uploads might reduce quality.
+- For best results, use high-quality source videos.
 
 ## License
 
@@ -75,7 +115,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contributing
 
-Contributions are welcome! Please fork this repository and submit a pull request for any enhancements or bug fixes. For major changes, please open an issue first to discuss what you would like to change.
-```
-
+Contributions are welcome! Please fork this repository and submit a pull request for any enhancements or bug fixes. For major changes, please open an issue first to discuss your ideas.
 

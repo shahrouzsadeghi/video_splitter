@@ -2,7 +2,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+.env
+.DS_Store
 # Virtual environment
 env/
 venv/
@@ -23,3 +24,4 @@ var/
 .installed.cfg
 *.egg
 
+xCoderContextTemplates/
